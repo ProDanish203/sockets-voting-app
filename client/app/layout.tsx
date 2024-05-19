@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/store/AuthProvider";
 import ReactQueryProvider from "@/store/ReactQueryProvider";
 import { Toaster } from "sonner";
+import { Header } from "@/components/shared";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <ReactQueryProvider>
           <AuthProvider>
             <Toaster position="top-right" />
+            <Header />
             <main className="">{children}</main>
           </AuthProvider>
         </ReactQueryProvider>
